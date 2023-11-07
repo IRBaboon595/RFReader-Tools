@@ -603,7 +603,7 @@ void MainWindow::readData(void)
 
                                 }
 
-                                file_byte_array.append(file_string);
+                                file_byte_array.append(file_string.toUtf8());
                                 File->write("Start");
                                 File->write("\n");
                                 File->write(file_byte_array);
@@ -1940,7 +1940,7 @@ void MainWindow::mouseReleaseEvent(QMouseEvent *e)
       // Включить возможность приближения/удаления графика
       QwtPlotMagnifier *magnifier1 = new QwtPlotMagnifier(plot->canvas());
       // клавиша, активирующая приближение/удаление
-      magnifier1->setMouseButton(Qt::MidButton);
+      magnifier1->setMouseButton(Qt::MiddleButton);
       // Включить возможность перемещения по графику
       QwtPlotPanner *panner1 = new QwtPlotPanner(plot->canvas());
       // клавиша, активирующая перемещение
@@ -1949,7 +1949,7 @@ void MainWindow::mouseReleaseEvent(QMouseEvent *e)
       // Включить возможность приближения/удаления графика
       QwtPlotMagnifier *magnifier2 = new QwtPlotMagnifier(spectre_graph->canvas());
       // клавиша, активирующая приближение/удаление
-      magnifier2->setMouseButton(Qt::MidButton);
+      magnifier2->setMouseButton(Qt::MiddleButton);
       // Включить возможность перемещения по графику
       QwtPlotPanner *panner2 = new QwtPlotPanner(spectre_graph->canvas());
       // клавиша, активирующая перемещение
@@ -1958,7 +1958,7 @@ void MainWindow::mouseReleaseEvent(QMouseEvent *e)
       // Включить возможность приближения/удаления графика
       QwtPlotMagnifier *deriv_magnifier = new QwtPlotMagnifier(derivative_plot->canvas());
       // клавиша, активирующая приближение/удаление
-      deriv_magnifier->setMouseButton(Qt::MidButton);
+      deriv_magnifier->setMouseButton(Qt::MiddleButton);
       // Включить возможность перемещения по графику
       QwtPlotPanner *deriv_panner = new QwtPlotPanner(derivative_plot->canvas());
       // клавиша, активирующая перемещение
@@ -1967,7 +1967,7 @@ void MainWindow::mouseReleaseEvent(QMouseEvent *e)
       // Включить возможность приближения/удаления графика
       QwtPlotMagnifier *peak_magnifier = new QwtPlotMagnifier(peak_plot->canvas());
       // клавиша, активирующая приближение/удаление
-      peak_magnifier->setMouseButton(Qt::MidButton);
+      peak_magnifier->setMouseButton(Qt::MiddleButton);
       // Включить возможность перемещения по графику
       QwtPlotPanner *peak_panner = new QwtPlotPanner(peak_plot->canvas());
       // клавиша, активирующая перемещение
